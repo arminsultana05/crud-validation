@@ -13,6 +13,7 @@ connect(
 const morgan = require('morgan')
 
 const userRoutes = require('./routes/user')
+const categoryRoutes = require('./routes/categories')
 
 const app = express();
 
@@ -21,5 +22,6 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan('dev'))
 app.use('/user', userRoutes )
+app.use('/category', categoryRoutes)
 
 module.exports = app;
