@@ -14,6 +14,7 @@ const morgan = require('morgan')
 
 const userRoutes = require('./routes/user')
 const categoryRoutes = require('./routes/categories')
+const todoRoute = require('./routes/todo')
 
 const app = express();
 
@@ -23,5 +24,6 @@ app.use(express.json());
 app.use(morgan('dev'))
 app.use('/user', userRoutes )
 app.use('/category', categoryRoutes)
+app.use('/todo', todoRoute)
 
 module.exports = app;
